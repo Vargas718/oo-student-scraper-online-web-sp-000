@@ -24,12 +24,7 @@ class Student
     #binding.pry
     students_array.each do |students| 
       Student.new(students)
-        
-        
-                       
                         end 
-    
-  
   end
 
   def add_student_attributes(attributes_hash)
