@@ -7,19 +7,22 @@ class Student
   def initialize(student_hash)
     @name = name
   
-    newstudent = student_hash.collect do |k, v|  instance_variable_set("@#{k}", v) unless v.nil?
-    #student_hash.collect do |k, v| send(":k" => v)
-    #send(newstudent, @@all)
-     
-                                      end
-    # send(:newstudent, @@all)
+    student_hash.collect do |k, v|  
+    send("#{k}=", v) unless v.nil?
     
-  
+     
+                         end
+     @@all << self
   end
 
-
+# method below should iterate over the array of
+# hashes and create a new individual student using each hash.
+  
+  
   def self.create_from_collection(students_array)
     
+    students_array.each do
+                        end 
   end
 
   def add_student_attributes(attributes_hash)
