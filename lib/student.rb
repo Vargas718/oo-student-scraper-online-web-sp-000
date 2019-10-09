@@ -31,6 +31,7 @@ class Student
    # binding.pry
    attributes_hash.collect do |k, v|  
     send("#{k}=", v) unless v.nil?
+                           end
   end
 
   def self.all
