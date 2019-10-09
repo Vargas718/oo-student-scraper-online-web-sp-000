@@ -29,7 +29,8 @@ class Student
 
   def add_student_attributes(attributes_hash)
    # binding.pry
-   
+   attributes_hash.collect do |k, v|  
+    send("#{k}=", v) unless v.nil?
   end
 
   def self.all
