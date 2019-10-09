@@ -22,7 +22,8 @@ class Student
   def self.create_from_collection(students_array)
     binding.pry
     students_array.each do |students| 
-      students.collect
+      students.collect do |key, value| puts key
+                       end
                         end 
     
   
